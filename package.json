@@ -19,7 +19,7 @@
     "axios": "^0.25.0",
     "date-fns": "^2.28.0",
     "filestack-js": "^3.25.0",
-    "filestack-react": "^4.0.1",
+    "filestack-react": "^5.0.0",
     "firebase": "^9.6.11",
     "history": "^4.10.1",
     "leaflet": "^1.8.0",

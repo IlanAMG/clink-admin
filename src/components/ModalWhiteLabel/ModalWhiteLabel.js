@@ -71,6 +71,7 @@ export default function ModalWhiteLabel({
   });
 
   const onChangeLogo = async (res, type) => {
+    console.log("res", res);
     if (res.filesUploaded[0]?.url !== null) {
       var obj = res.filesUploaded[0];
       await fetch(obj.url)
@@ -95,7 +96,7 @@ export default function ModalWhiteLabel({
     const metadata = {
       contentType: logoBlob?.type || "image/jpeg",
     };
-
+    console.log("logoBlob", logoBlob);
     const imageRef = ref(storage, "images/" + fileName);
     await uploadBytes(imageRef, logoBlob, metadata);
 
@@ -152,8 +153,9 @@ export default function ModalWhiteLabel({
     <>
       {openFileStackSmall && (
         <PickerOverlay
-          apikey="AtxLFzAlXRsmjnJW7WNNmz"
+          apikey="A31MqJVcLQvuKQVlsYc0xz"
           onSuccess={(res) => onChangeLogo(res, "logoSmall")}
+          onUploadDone={(res) => console.log("onUploadDone", res)}
           pickerOptions={{
             accept: "image/*",
             maxSize: 1024 * 1024,
@@ -174,7 +176,7 @@ export default function ModalWhiteLabel({
       )}
       {openFileStackBig && (
         <PickerOverlay
-          apikey="AtxLFzAlXRsmjnJW7WNNmz"
+          apikey="A31MqJVcLQvuKQVlsYc0xz"
           onSuccess={(res) => onChangeLogo(res, "logoBig")}
           pickerOptions={{
             accept: "image/*",

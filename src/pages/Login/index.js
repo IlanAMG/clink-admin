@@ -129,6 +129,7 @@ function Login() {
         onLogedin(userCredential);
       })
       .catch(function (err) {
+        console.log("err de CONEexion", err);
         if (err.code === "auth/multi-factor-auth-required") {
           setLoginStep("captcha");
           setError(err);
@@ -184,7 +185,7 @@ function Login() {
       style={{
         display: "flex",
         width: "100vw",
-        backgroundColor: "#7E43F1",
+        backgroundColor: "#46516D",
         height: "100vh",
         justifyContent: "center",
         alignItems: "center",

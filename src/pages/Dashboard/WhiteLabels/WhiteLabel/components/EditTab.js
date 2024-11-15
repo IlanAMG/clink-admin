@@ -105,7 +105,7 @@ const EditTab = ({
       />
       {openFileStackSmall && (
         <PickerOverlay
-          apikey="AtxLFzAlXRsmjnJW7WNNmz"
+          apikey="A31MqJVcLQvuKQVlsYc0xz"
           onSuccess={(res) => onChangeLogo(res, "logoSmall")}
           pickerOptions={{
             accept: "image/*",
@@ -127,7 +127,7 @@ const EditTab = ({
       )}
       {openFileStackBig && (
         <PickerOverlay
-          apikey="AtxLFzAlXRsmjnJW7WNNmz"
+          apikey="A31MqJVcLQvuKQVlsYc0xz"
           onSuccess={(res) => onChangeLogo(res, "logoBig")}
           pickerOptions={{
             accept: "image/*",

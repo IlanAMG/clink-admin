@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// const URL = "http://localhost:5001/gopopme-7353a/europe-west3/api2";
-const URL = "https://europe-west3-gopopme-7353a.cloudfunctions.net/api2";
+const URL = "http://localhost:5001/clink-d33fc/europe-west3/api2";
+// const URL = "https://europe-west3-clink-d33fc.cloudfunctions.net/api2";
 
 export const functionsFetch = (config) => {
   //interceptors handle network error

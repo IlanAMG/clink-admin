@@ -17,9 +17,9 @@ export default function App() {
       let data = JSON.parse(window.sessionStorage.getItem("user"));
       if (data) {
         if (data.role === "admin") navigate("dashboard/global");
-        if (data.role === "vendor" || data.role === "taxi")
-          navigate("dashboard/taxis");
-        if (data.role === "sponsor") navigate("dashboard/taxis?tab=modules");
+        // if (data.role === "vendor" || data.role === "taxi")
+        //   navigate("dashboard/taxis");
+        // if (data.role === "sponsor") navigate("dashboard/taxis?tab=modules");
       }
     })();
   }, []);

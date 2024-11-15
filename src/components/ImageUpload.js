@@ -70,7 +70,7 @@ export default function ImageUpload({
     <ContainerUploadLogo size={size} ratio={ratio}>
       {fileStackOpen && (
         <PickerOverlay
-          apikey="AtxLFzAlXRsmjnJW7WNNmz"
+          apikey="A31MqJVcLQvuKQVlsYc0xz"
           onSuccess={(res) => onChangeImage(res)}
           pickerOptions={{
             accept: "image/*",

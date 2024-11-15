@@ -1,16 +1,18 @@
 /**
  * Filestack-react is having a bug on container id
  * this component here is for making it work
-*/
+ */
 import React, { useEffect } from "react";
-import { client as filestack } from 'filestack-react';
- 
+import { client as filestack } from "filestack-react";
+
 const usePicker = (_ref) => {
   const { apikey } = _ref;
   const _ref$pickerOptions = _ref.pickerOptions;
-  const pickerOptions = _ref$pickerOptions === undefined ? {} : _ref$pickerOptions;
+  const pickerOptions =
+    _ref$pickerOptions === undefined ? {} : _ref$pickerOptions;
   const _ref$clientOptions = _ref.clientOptions;
-  const clientOptions = _ref$clientOptions === undefined ? {} : _ref$clientOptions;
+  const clientOptions =
+    _ref$clientOptions === undefined ? {} : _ref$clientOptions;
   const _ref$onSuccess = _ref.onSuccess;
   // eslint-disable-next-line no-console
   const onSuccess = _ref$onSuccess === undefined ? console.log : _ref$onSuccess;
@@ -24,13 +26,13 @@ const usePicker = (_ref) => {
   const _onSuccess = (result) => {
     onSuccess(result);
   };
-  const rootId = 'asset-root';
-  const containerId = 'asset-container';
+  const rootId = "asset-root";
+  const containerId = "asset-container";
   const picker = filestack.Filestack(apikey, clientOptions).picker({
     ...pickerOptions,
     rootId,
     container: `#${containerId}`,
-    onUploadDone: _onSuccess
+    onUploadDone: _onSuccess,
   });
 
   useEffect(() => {
@@ -42,13 +44,13 @@ const usePicker = (_ref) => {
     };
   }, []);
   return {
-    containerId
+    containerId,
   };
 };
 
 export const PickerOverlay = (_ref) => {
   const {
-    apikey,
+    apikey = "A31MqJVcLQvuKQVlsYc0xz",
     pickerOptions,
     clientOptions,
     onSuccess,
@@ -59,12 +61,18 @@ export const PickerOverlay = (_ref) => {
     apikey,
     pickerOptions: {
       ...pickerOptions,
-      displayMode: filestack.PickerOverlay
+      displayMode: filestack.PickerOverlay,
     },
     clientOptions,
     onSuccess,
-    onError
+    onError,
   });
   const { containerId } = _usePicker;
-  return <div id={containerId} style={{ height: '500px' }} data-testid="picker-inline" />;
+  return (
+    <div
+      id={containerId}
+      style={{ height: "500px" }}
+      data-testid="picker-inline"
+    />
+  );
 };

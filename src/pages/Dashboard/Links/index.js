@@ -39,11 +39,13 @@ export default function WhitelabelList() {
 
   useEffect(() => {
     if (!isLoading) fetchData();
-  }, [isLoading]);
+    // eslint-disable-next-line no-use-before-define
+  }, [fetchData, isLoading]);
 
   useEffect(() => {
     fetchData();
-  }, []);
+    // eslint-disable-next-line no-use-before-define
+  }, [fetchData]);
 
   useEffect(() => {
     if (refetch) {

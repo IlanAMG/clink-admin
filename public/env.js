@@ -1,4 +1,4 @@
 window.env = {
-  "ADMIN_UID": "aOrQKFDn4gekjya2u0qn7YbdWnw2",
-  "ADMIN_UID2": "Jq5hQrjykHMURpqKW5cyI7yJ0RA2"
+  "ADMIN_UID": "ySygJa2PhgVqNQ900kXos3Wuj4I3",
+  "ADMIN_UID2": "ySygJa2PhgVqNQ900kXos3Wuj4I3"
 };
